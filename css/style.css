@@ -1,0 +1,138 @@
+body {
+    font-family: "Poiret One", "Zen Kurenaido", sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.poiret-one-regular {
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.zen-kurenaido-regular {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#nav {
+    list-style: none;
+}
+
+#nav li {
+    width: auto;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(252, 157, 185) 70%);
+    padding-top: 40px;
+    display: inline-block;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    position: relative;
+    font-size: 26px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-image: repeating-linear-gradient(45deg, #b4a983 0px, #b4a983 1px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%);
+    background-size: 8px 8px;
+}
+
+h2 {
+    display: inline;
+    font-size: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(252, 157, 185) 70%);
+    margin-top: 20px;
+}
+
+.news-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* アイテム間の隙間 */
+    margin: 0 auto;
+    /* コンテナを中央揃え */
+    max-width: 1200px;
+    /* デスクトップでの幅を制限 */
+}
+
+.news-item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    /* パディングやボーダーを含めた幅計算 */
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.news-item h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.news-item p {
+    margin: 0 0 5px;
+}
+
+.news-item a {
+    color: #55636d;
+    text-decoration: none;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.datetime {
+    margin: 0 0 5px;
+    display: inline-block;
+}
+
+.date,
+.time {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 5px 0;
+    display: inline;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 70%, rgb(252, 157, 185) 70%);
+    margin-top: 20px;
+}
+
+/* スマートフォン対応：画面幅が768px以下の場合 */
+@media (max-width: 768px) {
+    .news-item {
+        flex: 1 1 100%;
+        /* 100%の幅を取る */
+        max-width: 100%;
+        /* 横幅を100%にする */
+        margin: 0;
+        /* マージンをリセットして余計な隙間を除去 */
+    }
+}
